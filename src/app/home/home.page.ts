@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import {
   IonHeader,
   IonToolbar,
@@ -12,8 +12,11 @@ import {
 
 interface Option {
   text: string;
-  color?: 'primary' | 'danger' | 'success';
+  status: Status;
 }
+
+type ButtonColor = 'primary' | 'danger' | 'success';
+type Status = 'initial' | 'rightAnswer' | 'wrongAnswer';
 
 @Component({
   selector: 'app-home',
@@ -35,15 +38,19 @@ export class HomePage {
   options: Option[] = [
     {
       text: 'Divulgar algo oculto que generalmente se considera negativo',
+      status: 'initial',
     },
     {
       text: 'Anular, tachar o borrar',
+      status: 'initial',
     },
     {
       text: 'Que implica o denota duda',
+      status: 'initial',
     },
     {
       text: 'No c bro disculpa',
+      status: 'initial',
     },
   ];
   hasUserAnswered: boolean = false;
@@ -54,17 +61,25 @@ export class HomePage {
 
     this.options.forEach((option, currentIndex) => {
       if (currentIndex === this.rightAnswerIndex) {
-        option.color = 'success';
+        option.status = 'rightAnswer';
       } else if (currentIndex === selectedAnswerIndex) {
-        option.color = 'danger';
+        option.status = 'wrongAnswer';
       }
     })
     
     this.hasUserAnswered = true;
   }
 
+  getButtonColor(status: Status): ButtonColor {
+    switch (status) {
+      case 'initial': return 'primary';
+      case 'rightAnswer': return 'success';
+      case 'wrongAnswer': return 'danger';
+    }
+  }
+
   reset() {
-    this.options.forEach(option => option.color = 'primary');
+    this.options.forEach(option => option.status = 'initial');
     this.hasUserAnswered = false;
   }
 }

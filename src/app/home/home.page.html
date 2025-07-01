@@ -28,7 +28,7 @@
           class="ion-text-wrap"
           expand="block"
           fill="solid"
-          [color]="option.color ?? 'primary'"
+          [color]="getButtonColor(option.status)"
           (click)="answerQuestion($index)">
           {{ option.text }}
         </ion-button>
