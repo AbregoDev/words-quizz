@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import {
   IonHeader,
   IonToolbar,
@@ -12,7 +12,7 @@ import {
 
 interface Option {
   text: string;
-  isCorrectoAnswer: boolean;
+  color?: 'primary' | 'danger' | 'success';
 }
 
 @Component({
@@ -35,17 +35,36 @@ export class HomePage {
   options: Option[] = [
     {
       text: 'Divulgar algo oculto que generalmente se considera negativo',
-      isCorrectoAnswer: false,
     },
     {
       text: 'Anular, tachar o borrar',
-      isCorrectoAnswer: true,
     },
     {
       text: 'Que implica o denota duda',
-      isCorrectoAnswer: false,
+    },
+    {
+      text: 'No c bro disculpa',
     },
   ];
+  hasUserAnswered: boolean = false;
+  rightAnswerIndex: number = 1;
 
-  constructor() {}
+  answerQuestion(selectedAnswerIndex: number) {
+    if (this.hasUserAnswered) return;
+
+    this.options.forEach((option, currentIndex) => {
+      if (currentIndex === this.rightAnswerIndex) {
+        option.color = 'success';
+      } else if (currentIndex === selectedAnswerIndex) {
+        option.color = 'danger';
+      }
+    })
+    
+    this.hasUserAnswered = true;
+  }
+
+  reset() {
+    this.options.forEach(option => option.color = 'primary');
+    this.hasUserAnswered = false;
+  }
 }

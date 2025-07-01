@@ -28,8 +28,8 @@
           class="ion-text-wrap"
           expand="block"
           fill="solid"
-          [color]="option.isCorrectoAnswer ? 'success' : 'primary'"
-          (click)="option.isCorrectoAnswer = !option.isCorrectoAnswer">
+          [color]="option.color ?? 'primary'"
+          (click)="answerQuestion($index)">
           {{ option.text }}
         </ion-button>
       }
@@ -42,7 +42,8 @@
     <ion-button
       expand="full"
       color="secondary"
-      disabled="false">
+      [disabled]="!hasUserAnswered"
+      (click)="reset()">
       Continuar
     </ion-button>
   </div>
