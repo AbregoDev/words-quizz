@@ -2,6 +2,9 @@ import { Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, EventEmitter, OnInit, Ou
 import { IonHeader, IonToolbar, IonContent, IonButton, IonFooter, IonProgressBar } from '@ionic/angular/standalone';
 import Swiper from 'swiper';
 import { QuestionComponent } from '../../components/question/question.component';
+import { StartQuizzComponent } from "src/app/components/start-quizz/start-quizz.component";
+import { CommonModule } from '@angular/common';
+import { QuizzResultComponent } from "src/app/components/quizz-result/quizz-result.component";
 
 interface WordQuestion {
   word: string;
@@ -18,6 +21,7 @@ interface EndQuizzEvent {
   templateUrl: './quizz.page.html',
   styleUrls: ['./quizz.page.scss'],
   imports: [
+    CommonModule,
     IonHeader,
     IonToolbar,
     IonContent,
@@ -25,6 +29,8 @@ interface EndQuizzEvent {
     IonFooter,
     IonProgressBar,
     QuestionComponent,
+    StartQuizzComponent,
+    QuizzResultComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
@@ -60,8 +66,10 @@ export class QuizzComponent implements OnInit {
     }
   ];
 
-  @ViewChild('swiperContainer', { static: true }) swiperContainer!: ElementRef;
+  @ViewChild('questionsSwiperContainer', { static: true }) swiperContainer!: ElementRef;
   swiperController!: Swiper;
+  @ViewChild('mainSwiperContainer', { static: true }) mainSwiperContainer!: ElementRef;
+  mainSwiperController!: Swiper;
   currentQuestionIndex: number = 0;
   isNextButtonBlocked: boolean = true;
 
@@ -71,13 +79,22 @@ export class QuizzComponent implements OnInit {
     return (this.currentQuestionIndex + 1) / (this.questions.length);
   }
 
+  get isQuizzActive() {
+    return this.mainSwiperController?.activeIndex === 1;
+  }
+
   ngOnInit(): void {
     this.swiperController = this.swiperContainer.nativeElement.swiper;
+    this.mainSwiperController = this.mainSwiperContainer.nativeElement.swiper;
+  }
+
+  startQuizz() {
+    this.mainSwiperController.slideNext();
   }
 
   moveToNextQuestion() {
     if (this.currentQuestionIndex === this.questions.length - 1) {
-      this.endQuizzEvent.emit({ score: this.questions.length }); 
+      this.mainSwiperController.slideNext();
       return;
     }
 
