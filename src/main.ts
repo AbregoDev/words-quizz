@@ -5,10 +5,14 @@ import { IonicRouteStrategy, provideIonicAngular } from '@ionic/angular/standalo
 import { routes } from './app/app.routes';
 import { AppComponent } from './app/app.component';
 
+import { register } from 'swiper/element';
+
 bootstrapApplication(AppComponent, {
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    provideIonicAngular(),
+    provideIonicAngular({ mode: 'ios' }),
     provideRouter(routes, withPreloading(PreloadAllModules)),
   ],
 });
+
+register();

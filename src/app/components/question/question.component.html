@@ -1,0 +1,18 @@
+<div id="container">
+  <div class="question">
+    <h4>
+      ¿Qué significa la siguiente palabra?
+    </h4>
+    <ion-text color="primary">
+      <h2><i>{{ questionWord }}</i></h2>
+    </ion-text>
+  </div>
+
+  <div class="options-group">
+    @for (option of options; track $index) {
+    <ion-button class="ion-text-wrap" expand="block" fill="solid" color="warning" (click)="emitAnswer($index)">
+      {{ option }}
+    </ion-button>
+    }
+  </div>
+</div>

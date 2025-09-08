@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-progress-bar [value]="progressValue"></ion-progress-bar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <swiper-container #swiperContainer>
+    @for (question of questions; track $index) {
+    <swiper-slide>
+      <app-question [options]="question.options" [questionWord]="question.word" (onAnswer)="checkAnswer($event)"></app-question>
+    </swiper-slide>
+    }
+  </swiper-container>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button expand="full" color="secondary" [disabled]="isNextButtonBlocked" (click)="moveToNextQuestion()">
+      Continuar
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>
