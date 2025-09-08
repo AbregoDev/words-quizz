@@ -1,16 +1,13 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, EventEmitter, inject, OnInit, Output, ViewChild } from '@angular/core';
 import { IonHeader, IonToolbar, IonContent, IonButton, IonFooter, IonProgressBar } from '@ionic/angular/standalone';
+import { CommonModule } from '@angular/common';
 import Swiper from 'swiper';
+
 import { QuestionComponent } from '../../components/question/question.component';
 import { StartQuizzComponent } from "src/app/components/start-quizz/start-quizz.component";
-import { CommonModule } from '@angular/common';
 import { QuizzResultComponent } from "src/app/components/quizz-result/quizz-result.component";
-
-interface WordQuestion {
-  word: string;
-  options: string[];
-  rightAnswerIndex: number;
-}
+import { WordsRepositoryService } from 'src/app/services/words-repository.service';
+import { WordQuestion } from 'src/app/interfaces/words-repository.interface';
 
 interface EndQuizzEvent {
   score: number;
@@ -36,35 +33,7 @@ interface EndQuizzEvent {
 })
 export class QuizzComponent implements OnInit {
 
-  questions: WordQuestion[] = [
-    {
-      word: 'Variopinto',
-      options: [
-        'Opción 1',
-        'Opción 2',
-        'Opción 3'
-      ],
-      rightAnswerIndex: 1
-    },
-    {
-      word: 'Techunbre',
-      options: [
-        'Opción X',
-        'Opción Y',
-      ],
-      rightAnswerIndex: 0
-    },
-    {
-      word: 'Afable',
-      options: [
-        'Option A',
-        'Option B',
-        'Option C',
-        'Option D',
-      ],
-      rightAnswerIndex: 2
-    }
-  ];
+  questions: WordQuestion[] = [];
 
   @ViewChild('questionsSwiperContainer', { static: true }) swiperContainer!: ElementRef;
   swiperController!: Swiper;
@@ -74,6 +43,8 @@ export class QuizzComponent implements OnInit {
   isNextButtonBlocked: boolean = true;
 
   @Output('endQuizz') endQuizzEvent = new EventEmitter<EndQuizzEvent>();
+
+  private readonly wordsRepositoryService = inject(WordsRepositoryService);
 
   get progressValue() {
     return (this.currentQuestionIndex + 1) / (this.questions.length);
@@ -86,6 +57,9 @@ export class QuizzComponent implements OnInit {
   ngOnInit(): void {
     this.swiperController = this.swiperContainer.nativeElement.swiper;
     this.mainSwiperController = this.mainSwiperContainer.nativeElement.swiper;
+
+    const words = this.wordsRepositoryService.getWordsQuestions(5);
+    this.questions = words;
   }
 
   startQuizz() {
