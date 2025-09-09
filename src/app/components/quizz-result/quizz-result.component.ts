@@ -11,7 +11,7 @@ import { IonButton } from "@ionic/angular/standalone";
 export class QuizzResultComponent {
 
   private readonly LOW_SCORE_THRESHOLD = 0.5;
-  private readonly HIGH_SCORE_THRESHOLD = 0.9;
+  private readonly HIGH_SCORE_THRESHOLD = 0.8;
 
   @Input() correctlyAnsweredQuestions!: number;
   @Input() totalQuestions!: number;
