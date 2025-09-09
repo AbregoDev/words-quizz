@@ -62,6 +62,9 @@ export class QuizzComponent implements OnInit {
     this.swiperController = this.swiperContainer.nativeElement.swiper;
     this.mainSwiperController = this.mainSwiperContainer.nativeElement.swiper;
 
+    this.swiperController.allowTouchMove = false;
+    this.mainSwiperController.allowTouchMove = false;
+
     const words = this.wordsRepositoryService.getWordsQuestions(this.TOTAL_QUESTIONS);
     this.questions = words;
   }
