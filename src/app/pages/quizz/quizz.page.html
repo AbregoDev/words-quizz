@@ -7,7 +7,7 @@
 <ion-content class="ion-padding">
   <swiper-container #mainSwiperContainer id="mainSwiperContainer">
     <swiper-slide>
-      <app-start-quizz (onStartQuizz)="startQuizz()"></app-start-quizz>
+      <app-start-quizz [totalQuestions]="TOTAL_QUESTIONS" (onStartQuizz)="startQuizz()"></app-start-quizz>
     </swiper-slide>
     <swiper-slide>
       <swiper-container #questionsSwiperContainer>

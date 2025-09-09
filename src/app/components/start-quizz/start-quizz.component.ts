@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { IonButton } from '@ionic/angular/standalone';
 
 @Component({
@@ -9,6 +9,7 @@ import { IonButton } from '@ionic/angular/standalone';
 })
 export class StartQuizzComponent {
 
+  @Input() totalQuestions!: number;
   @Output('onStartQuizz') startQuizzEventEmitter = new EventEmitter();
 
   emitStartQuizzEvent() {
