@@ -13,7 +13,7 @@
       <swiper-container #questionsSwiperContainer>
         @for (question of questions; track $index) {
         <swiper-slide>
-          <app-question [options]="question.options" [questionWord]="question.word"
+          <app-question [options]="question.options" [questionWord]="question.word" [rightAnswerIndex]="question.rightAnswerIndex"
             (onAnswer)="checkAnswer($event)"></app-question>
         </swiper-slide>
         }

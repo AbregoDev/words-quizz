@@ -10,7 +10,10 @@
 
   <div class="options-group">
     @for (option of options; track $index) {
-    <ion-button class="ion-text-wrap" expand="block" fill="solid" color="warning" (click)="emitAnswer($index)">
+    @let style = optionsStyle[$index];
+    <ion-button class="ion-text-wrap" expand="block"
+      [fill]="style.fill" [color]="style.color"
+      (click)="evaluateAnswer($index)">
       {{ option }}
     </ion-button>
     }

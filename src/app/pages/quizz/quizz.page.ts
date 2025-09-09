@@ -8,6 +8,7 @@ import { StartQuizzComponent } from "src/app/components/start-quizz/start-quizz.
 import { QuizzResultComponent } from "src/app/components/quizz-result/quizz-result.component";
 import { WordsRepositoryService } from 'src/app/services/words-repository.service';
 import { WordQuestion } from 'src/app/interfaces/words-repository.interface';
+import { AnswerEvent } from 'src/app/interfaces/events.interface';
 
 interface EndQuizzEvent {
   score: number;
@@ -77,7 +78,7 @@ export class QuizzComponent implements OnInit {
     this.isNextButtonBlocked = true;
   }
 
-  checkAnswer(answerIndex: number) {
+  checkAnswer(answerEvent: AnswerEvent) {
     this.isNextButtonBlocked = false;
   }
 
