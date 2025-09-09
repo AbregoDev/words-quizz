@@ -7,10 +7,7 @@ import { OptionStyle } from 'src/app/interfaces/option-style.interface';
   selector: 'app-question',
   templateUrl: './question.component.html',
   styleUrls: ['./question.component.scss'],
-  imports: [
-    IonText,
-    IonButton,
-  ],
+  imports: [ IonText, IonButton ]
 })
 export class QuestionComponent {
 
