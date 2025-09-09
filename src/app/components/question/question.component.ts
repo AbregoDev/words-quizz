@@ -23,6 +23,7 @@ export class QuestionComponent {
   @Input() set options(value: string[]) {
     this._options = value;
     this.optionsStyle = this.populateDefaultStyles(value);
+    this.hasUserAnswered = false;
   }
 
   @Output('onAnswer') readonly answerEvent = new EventEmitter<AnswerEvent>();
