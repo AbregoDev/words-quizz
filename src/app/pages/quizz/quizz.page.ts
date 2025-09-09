@@ -80,4 +80,13 @@ export class QuizzComponent implements OnInit {
   checkAnswer(answerIndex: number) {
     this.isNextButtonBlocked = false;
   }
+
+  resetQuizz() {
+    this.mainSwiperController.slideTo(0);
+    this.swiperController.slideTo(0);
+
+    const words = this.wordsRepositoryService.getWordsQuestions(5);
+    this.questions = words;
+    this.currentQuestionIndex = 0;
+  }
 }

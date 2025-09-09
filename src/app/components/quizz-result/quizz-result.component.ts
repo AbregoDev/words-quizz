@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { IonButton } from "@ionic/angular/standalone";
 
 @Component({
@@ -7,10 +7,12 @@ import { IonButton } from "@ionic/angular/standalone";
   styleUrls: ['./quizz-result.component.scss'],
   imports: [IonButton]
 })
-export class QuizzResultComponent  implements OnInit {
+export class QuizzResultComponent {
 
-  constructor() { }
+  @Output()
+  private readonly exitEvent = new EventEmitter();
 
-  ngOnInit() {}
-
+  emitExitEvent() {
+    this.exitEvent.emit();
+  }
 }
