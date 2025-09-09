@@ -9,5 +9,22 @@
 .score {
   font-size: 72pt;
   margin: 50px 0;
-  color: rgb(122, 247, 122);
+  opacity: 0;
+  transition: opacity 1s ease-out 0.3s;
+}
+
+.visible-score {
+  opacity: 1;
+}
+
+.low-score {
+  color: red;
+}
+
+.medium-score {
+  color: orange;
+}
+
+.high-score {
+  color: lightgreen;
 }

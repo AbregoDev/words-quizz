@@ -20,13 +20,15 @@
       </swiper-container>
     </swiper-slide>
     <swiper-slide>
-      <app-quizz-result (exitEvent)="resetQuizz()"></app-quizz-result>
+      <app-quizz-result [correctlyAnsweredQuestions]="correctlyAnsweredQuestions" [totalQuestions]="questions.length"
+        [hasQuizzEnded]="hasQuizzEnded" (exitEvent)="resetQuizz()"></app-quizz-result>
     </swiper-slide>
   </swiper-container>
 </ion-content>
 
 <ion-footer>
-  <ion-button [ngClass]="{ 'hideElement': !isQuizzActive }" expand="full" color="secondary" [disabled]="isNextButtonBlocked" (click)="moveToNextQuestion()">
+  <ion-button [ngClass]="{ 'hideElement': !isQuizzActive }" expand="full" color="secondary" [disabled]="isNextButtonBlocked"
+    (click)="moveToNextQuestion()">
     Continuar
   </ion-button>
 </ion-footer>

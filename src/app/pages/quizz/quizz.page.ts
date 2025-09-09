@@ -42,6 +42,8 @@ export class QuizzComponent implements OnInit {
   mainSwiperController!: Swiper;
   currentQuestionIndex: number = 0;
   isNextButtonBlocked: boolean = true;
+  correctlyAnsweredQuestions: number = 0;
+  hasQuizzEnded: boolean = false;
 
   @Output('endQuizz') endQuizzEvent = new EventEmitter<EndQuizzEvent>();
 
@@ -70,6 +72,7 @@ export class QuizzComponent implements OnInit {
   moveToNextQuestion() {
     if (this.currentQuestionIndex === this.questions.length - 1) {
       this.mainSwiperController.slideNext();
+      this.hasQuizzEnded = true;
       return;
     }
 
@@ -79,6 +82,10 @@ export class QuizzComponent implements OnInit {
   }
 
   checkAnswer(answerEvent: AnswerEvent) {
+    if (answerEvent.isRightAnswer) {
+      this.correctlyAnsweredQuestions++;
+    }
+
     this.isNextButtonBlocked = false;
   }
 
@@ -89,5 +96,8 @@ export class QuizzComponent implements OnInit {
     const words = this.wordsRepositoryService.getWordsQuestions(5);
     this.questions = words;
     this.currentQuestionIndex = 0;
+    this.correctlyAnsweredQuestions = 0;
+    this.isNextButtonBlocked = true;
+    this.hasQuizzEnded = false;
   }
 }
