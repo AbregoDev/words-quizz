@@ -34,7 +34,7 @@ interface EndQuizzEvent {
 })
 export class QuizzComponent implements OnInit {
 
-  readonly TOTAL_QUESTIONS = 7;
+  readonly TOTAL_QUESTIONS = 10;
   questions: WordQuestion[] = [];
 
   @ViewChild('questionsSwiperContainer', { static: true }) swiperContainer!: ElementRef;
@@ -97,7 +97,7 @@ export class QuizzComponent implements OnInit {
     this.mainSwiperController.slideTo(0);
     this.swiperController.slideTo(0);
 
-    const words = this.wordsRepositoryService.getWordsQuestions(5);
+    const words = this.wordsRepositoryService.getWordsQuestions(this.TOTAL_QUESTIONS);
     this.questions = words;
     this.currentQuestionIndex = 0;
     this.correctlyAnsweredQuestions = 0;
