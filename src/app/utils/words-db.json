@@ -1,186 +1,338 @@
 [
-    {
-      "word": "Variopinto",
-      "answer": "Multiforme, mezclado, diverso"
-    },
-    {
-      "word": "Techunbre",
-      "answer": "Conjunto de la estructura y elementos de cierre de un techo"
-    },
-    {
-      "word": "Afable",
-      "answer": "Agradable, dulce, suave en la conversación y el trato"
-    },
-    {
-      "word": "Proscribir",
-      "answer": "Excluir o prohibir una costumbre o el uso de algo"
-    },
-    {
-      "word": "Paliativo",
-      "answer": "Que tiene como finalidad mitigar, suavizar o atenuar el dolor de un enfermo"
-    },
-    {
-      "word": "Ósculo",
-      "answer": "Beso de respeto o afecto"
-    },
-    {
-      "word": "Bregar",
-      "answer": "Ajetrearse, agitarse, trabajar afanosamente"
-    },
-    {
-      "word": "Detrimento",
-      "answer": "Perjuicio, daño o menoscabo que se causa a algo"
-    },
-    {
-      "word": "Hastío",
-      "answer": "Aburrimiento, hastío o desagrado que se siente ante algo"
-    },
-    {
-      "word": "Fehaciente",
-      "answer": "Que da fe o prueba de algo"
-    },
-    {
-      "word": "Avezado",
-      "answer": "Experimentado, hábil"
-    },
-    {
-      "word": "Trasiego",
-      "answer": "Acción de trasladar o mover algo de un lugar a otro"
-    },
-    {
-      "word": "Incólume",
-      "answer": "Que se mantiene intacto o sin alteraciones"
-    },
-    {
-      "word": "Imperar",
-      "answer": "Ejercer autoridad o dominio; predominar"
-    },
-    {
-      "word": "Limerencia",
-      "answer": "Estado mental involuntario de intensa atracción romántica por otra persona"
-    },
-    {
-      "word": "Denostar",
-      "answer": "Insultar, ofender gravemente"
-    },
-    {
-      "word": "Vituperar",
-      "answer": "Censurar o criticar con dureza"
-    },
-    {
-      "word": "Edil",
-      "answer": "Miembro del ayuntamiento encargado de servicios municipales"
-    },
-    {
-      "word": "Lerdo",
-      "answer": "Lento, torpe para comprender o hacer algo"
-    },
-    {
-      "word": "Tamizar",
-      "answer": "Filtrar o separar lo fino de lo grueso"
-    },
-    {
-      "word": "Onírico",
-      "answer": "Relacionado con los sueños"
-    },
-    {
-      "word": "Taimado",
-      "answer": "Astuto, disimulado y engañoso"
-    },
-    {
-      "word": "Beocio",
-      "answer": "Ignorante, falto de cultura"
-    },
-    {
-      "word": "Expugnar",
-      "answer": "Conquistar una plaza o fortaleza por la fuerza"
-    },
-    {
-      "word": "Chivato",
-      "answer": "Persona que delata o informa de algo secreto"
-    },
-    {
-      "word": "Quid",
-      "answer": "Esencia o punto clave de un asunto"
-    },
-    {
-      "word": "Taxativo",
-      "answer": "Que no admite interpretación o modificación; terminante"
-    },
-    {
-      "word": "Letanía",
-      "answer": "Oración formada por una serie de invocaciones; enumeración larga y monótona"
-    },
-    {
-      "word": "Piélago",
-      "answer": "Mar, océano; abundancia de algo"
-    },
-    {
-      "word": "Diletante",
-      "answer": "Persona que cultiva una afición sin ser profesional"
-    },
-    {
-      "word": "Aguzar",
-      "answer": "Hacer más agudo, afilar; estimular"
-    },
-    {
-      "word": "Nefando",
-      "answer": "Indigno, abominable, que causa horror"
-    },
-    {
-      "word": "Proscripción",
-      "answer": "Expulsión o prohibición de algo o alguien"
-    },
-    {
-      "word": "Conmiserarse",
-      "answer": "Sentir compasión por el sufrimiento ajeno"
-    },
-    {
-      "word": "Nimiedad",
-      "answer": "Cosa insignificante o de poca importancia"
-    },
-    {
-      "word": "Azorar",
-      "answer": "Asustar, sobresaltar"
-    },
-    {
-      "word": "Conturbar",
-      "answer": "Alterar, inquietar, turbar"
-    },
-    {
-      "word": "Desasosiego",
-      "answer": "Falta de tranquilidad, inquietud"
-    },
-    {
-      "word": "Elisión",
-      "answer": "Supresión de una vocal o sílaba en una palabra"
-    },
-    {
-      "word": "Soliloquio",
-      "answer": "Discurso de una persona consigo misma"
-    },
-    {
-      "word": "Colofón",
-      "answer": "Remate o final de una obra"
-    },
-    {
-      "word": "Inveterado",
-      "answer": "Que está arraigado por el tiempo"
-    },
-    {
-      "word": "Vetuso",
-      "answer": "Muy viejo, anticuado"
-    },
-    {
-      "word": "Cisma",
-      "answer": "Separación o división en el seno de una organización"
-    },
-    {
-      "word": "Abúlico",
-      "answer": "Que muestra falta de voluntad o energía"
-    },
-    {
-      "word": "Oligarquía",
-      "answer": "Forma de gobierno en la que el poder está en manos de unos pocos"
-    }
-  ]
+  {
+    "word": "Variopinto",
+    "answer": "Multiforme, mezclado, diverso"
+  },
+  {
+    "word": "Techunbre",
+    "answer": "Conjunto de la estructura y elementos de cierre de un techo"
+  },
+  {
+    "word": "Afable",
+    "answer": "Agradable, dulce, suave en la conversación y el trato"
+  },
+  {
+    "word": "Proscribir",
+    "answer": "Excluir o prohibir una costumbre o el uso de algo"
+  },
+  {
+    "word": "Paliativo",
+    "answer": "Que tiene como finalidad mitigar, suavizar o atenuar el dolor de un enfermo"
+  },
+  {
+    "word": "Ósculo",
+    "answer": "Beso de respeto o afecto"
+  },
+  {
+    "word": "Bregar",
+    "answer": "Ajetrearse, agitarse, trabajar afanosamente"
+  },
+  {
+    "word": "Detrimento",
+    "answer": "Perjuicio, daño o menoscabo que se causa a algo"
+  },
+  {
+    "word": "Hastío",
+    "answer": "Aburrimiento, hastío o desagrado que se siente ante algo"
+  },
+  {
+    "word": "Fehaciente",
+    "answer": "Que da fe o prueba de algo"
+  },
+  {
+    "word": "Avezado",
+    "answer": "Experimentado, hábil"
+  },
+  {
+    "word": "Trasiego",
+    "answer": "Acción de trasladar o mover algo de un lugar a otro"
+  },
+  {
+    "word": "Incólume",
+    "answer": "Que se mantiene intacto o sin alteraciones"
+  },
+  {
+    "word": "Imperar",
+    "answer": "Ejercer autoridad o dominio; predominar"
+  },
+  {
+    "word": "Limerencia",
+    "answer": "Estado mental involuntario de intensa atracción romántica por otra persona"
+  },
+  {
+    "word": "Denostar",
+    "answer": "Insultar, ofender gravemente"
+  },
+  {
+    "word": "Vituperar",
+    "answer": "Censurar o criticar con dureza"
+  },
+  {
+    "word": "Edil",
+    "answer": "Miembro del ayuntamiento encargado de servicios municipales"
+  },
+  {
+    "word": "Lerdo",
+    "answer": "Lento, torpe para comprender o hacer algo"
+  },
+  {
+    "word": "Tamizar",
+    "answer": "Filtrar o separar lo fino de lo grueso"
+  },
+  {
+    "word": "Onírico",
+    "answer": "Relacionado con los sueños"
+  },
+  {
+    "word": "Taimado",
+    "answer": "Astuto, disimulado y engañoso"
+  },
+  {
+    "word": "Beocio",
+    "answer": "Ignorante, falto de cultura"
+  },
+  {
+    "word": "Expugnar",
+    "answer": "Conquistar una plaza o fortaleza por la fuerza"
+  },
+  {
+    "word": "Chivato",
+    "answer": "Persona que delata o informa de algo secreto"
+  },
+  {
+    "word": "Quid",
+    "answer": "Esencia o punto clave de un asunto"
+  },
+  {
+    "word": "Taxativo",
+    "answer": "Que no admite interpretación o modificación; terminante"
+  },
+  {
+    "word": "Letanía",
+    "answer": "Oración formada por una serie de invocaciones; enumeración larga y monótona"
+  },
+  {
+    "word": "Piélago",
+    "answer": "Mar, océano; abundancia de algo"
+  },
+  {
+    "word": "Diletante",
+    "answer": "Persona que cultiva una afición sin ser profesional"
+  },
+  {
+    "word": "Aguzar",
+    "answer": "Hacer más agudo, afilar; estimular"
+  },
+  {
+    "word": "Nefando",
+    "answer": "Indigno, abominable, que causa horror"
+  },
+  {
+    "word": "Proscripción",
+    "answer": "Expulsión o prohibición de algo o alguien"
+  },
+  {
+    "word": "Conmiserarse",
+    "answer": "Sentir compasión por el sufrimiento ajeno"
+  },
+  {
+    "word": "Nimiedad",
+    "answer": "Cosa insignificante o de poca importancia"
+  },
+  {
+    "word": "Azorar",
+    "answer": "Asustar, sobresaltar"
+  },
+  {
+    "word": "Conturbar",
+    "answer": "Alterar, inquietar, turbar"
+  },
+  {
+    "word": "Desasosiego",
+    "answer": "Falta de tranquilidad, inquietud"
+  },
+  {
+    "word": "Elisión",
+    "answer": "Supresión de una vocal o sílaba en una palabra"
+  },
+  {
+    "word": "Soliloquio",
+    "answer": "Discurso de una persona consigo misma"
+  },
+  {
+    "word": "Colofón",
+    "answer": "Remate o final de una obra"
+  },
+  {
+    "word": "Inveterado",
+    "answer": "Que está arraigado por el tiempo"
+  },
+  {
+    "word": "Vetuso",
+    "answer": "Muy viejo, anticuado"
+  },
+  {
+    "word": "Cisma",
+    "answer": "Separación o división en el seno de una organización"
+  },
+  {
+    "word": "Abúlico",
+    "answer": "Que muestra falta de voluntad o energía"
+  },
+  {
+    "word": "Oligarquía",
+    "answer": "Forma de gobierno en la que el poder está en manos de unos pocos"
+  },
+  {
+    "word": "Amago",
+    "answer": "Señal o indicio de algo que está por suceder"
+  },
+  {
+    "word": "Acritud",
+    "answer": "Aspereza en el carácter, el trato o el lenguaje"
+  },
+  {
+    "word": "Compungir",
+    "answer": "Causar pena o dolor"
+  },
+  {
+    "word": "Inmanente",
+    "answer": "Que es inherente y permanece en algo"
+  },
+  {
+    "word": "Nepotismo",
+    "answer": "Preferencia que tienen algunos gobernantes para dar empleos a familiares"
+  },
+  {
+    "word": "Galimatías",
+    "answer": "Lenguaje confuso e incomprensible"
+  },
+  {
+    "word": "Elucubrar",
+    "answer": "Reflexionar, discurrir cuidadosamente sobre algo"
+  },
+  {
+    "word": "Escollo",
+    "answer": "Obstáculo o dificultad"
+  },
+  {
+    "word": "Emolumento",
+    "answer": "Retribución o sueldo por un trabajo"
+  },
+  {
+    "word": "Eximir",
+    "answer": "Liberar de una carga, obligación o culpa"
+  },
+  {
+    "word": "Palestra",
+    "answer": "Lugar donde se debate o discute algo públicamente"
+  },
+  {
+    "word": "Esgrimir",
+    "answer": "Utilizar argumentos o medios para conseguir algo"
+  },
+  {
+    "word": "Propalar",
+    "answer": "Divulgar, difundir una noticia o rumor"
+  },
+  {
+    "word": "Abjurar",
+    "answer": "Renunciar públicamente a una creencia o doctrina"
+  },
+  {
+    "word": "Apostatar",
+    "answer": "Abandonar públicamente una religión o creencia"
+  },
+  {
+    "word": "Escarceo",
+    "answer": "Acción breve y superficial en una actividad"
+  },
+  {
+    "word": "Vicisitud",
+    "answer": "Sucesión de cambios o circunstancias en la vida"
+  },
+  {
+    "word": "Resquicio",
+    "answer": "Abertura pequeña; oportunidad o posibilidad"
+  },
+  {
+    "word": "Vernáculo",
+    "answer": "Propio del país o región de la persona"
+  },
+  {
+    "word": "Dirimir",
+    "answer": "Resolver una discusión o conflicto"
+  },
+  {
+    "word": "Adagio",
+    "answer": "Sentencia breve que expresa una regla o principio"
+  },
+  {
+    "word": "Dubitativo",
+    "answer": "Que duda o vacila"
+  },
+  {
+    "word": "Categórico",
+    "answer": "Que afirma algo de manera absoluta y sin dudas"
+  },
+  {
+    "word": "Acuciante",
+    "answer": "Que urge o apremia"
+  },
+  {
+    "word": "Miríada",
+    "answer": "Gran cantidad, innumerable"
+  },
+  {
+    "word": "Lumpen",
+    "answer": "Grupo social marginado o empobrecido"
+  },
+  {
+    "word": "Quiasmo",
+    "answer": "Figura retórica que consiste en cruzar elementos en una frase"
+  },
+  {
+    "word": "Antítesis",
+    "answer": "Oposición entre dos ideas o expresiones"
+  },
+  {
+    "word": "Parosía",
+    "answer": "Presencia o llegada, especialmente en contexto religioso"
+  },
+  {
+    "word": "Cognoscible",
+    "answer": "Que puede ser conocido"
+  },
+  {
+    "word": "Obliterar",
+    "answer": "Borrar, eliminar o hacer desaparecer"
+  },
+  {
+    "word": "Estertor",
+    "answer": "Respiración ruidosa propia de la agonía"
+  },
+  {
+    "word": "Piafar",
+    "answer": "Golpear el suelo con las patas, dicho de un caballo"
+  },
+  {
+    "word": "Alazán",
+    "answer": "Caballo de color rojizo"
+  },
+  {
+    "word": "Desavenencia",
+    "answer": "Desacuerdo, falta de armonía"
+  },
+  {
+    "word": "Ecuánime",
+    "answer": "Que mantiene la calma y la imparcialidad"
+  },
+  {
+    "word": "Indulgente",
+    "answer": "Que perdona fácilmente las faltas"
+  },
+  {
+    "word": "Escaldar",
+    "answer": "Sumergir en agua hirviendo; causar irritación"
+  }
+]
